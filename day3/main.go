@@ -17,10 +17,8 @@ func main() {
 func part2(sacks []string) {
 	errWeight := 0
 
-	count := 0
 	for idx := 0; idx+3 <= len(sacks); idx += 3 {
 		errWeight += weightMap[findSharedItem(sacks[idx:idx+3]...)]
-		count += 1
 	}
 
 	fmt.Printf("\nPart 2 final err weight: %d\n", errWeight)
